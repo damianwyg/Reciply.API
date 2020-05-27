@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Reciply.API.Data.Interfaces;
+using Reciply.API.Dtos;
 using Reciply.API.Models;
 
 namespace Reciply.API.Controllers
@@ -21,20 +22,20 @@ namespace Reciply.API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(string username, string email, string password)
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
-            username = username.ToLower();
+            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
-            if (await _repo.UserExists(username))
-                return BadRequest("This email is already used");
+            if (await _repo.UserExists(userForRegisterDto.Username))
+                return BadRequest("User already exists");
 
             var userToSave = new User
             {
-                Username = username,
-                Email = email,
+                Username = userForRegisterDto.Username,
+                Email = userForRegisterDto.Email
             };
 
-            var userSaved = _repo.Register(userToSave, password);
+            var userSaved = await _repo.Register(userToSave, userForRegisterDto.Password);
 
             return StatusCode(201);
         }
