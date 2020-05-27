@@ -31,7 +31,7 @@ namespace Reciply.API.Data.Repositories
             return user;
         }
 
-        public async Task<User> LogIn(string username, string password)
+        public async Task<User> Login(string username, string password)
         {
             var userFromDb = await _context.Users.FirstOrDefaultAsync();
 
