@@ -5,6 +5,8 @@
 
 *.db
 appsettings.json
+reciply.db-shm
+reciply.db-wal
 
 # User-specific files
 *.rsuser
