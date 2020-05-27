@@ -13,6 +13,6 @@ namespace Reciply.API.Models
         public string  Email { get; set; }
 
         public byte[] PaswordHash { get; set; }
-        public byte[] MyProperty { get; set; }
+        public byte[] PasswordSalt { get; set; }
     }
 }

@@ -9,8 +9,8 @@ using Reciply.API.Data;
 namespace Reciply.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200527084944_InitialCreateUser")]
-    partial class InitialCreateUser
+    [Migration("20200527091545_InitialAddUser")]
+    partial class InitialAddUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("MyProperty")
+                    b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("BLOB");
 
                     b.Property<byte[]>("PaswordHash")

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Reciply.API.Migrations
 {
-    public partial class InitialCreateUser : Migration
+    public partial class InitialAddUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,7 @@ namespace Reciply.API.Migrations
                     Username = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     PaswordHash = table.Column<byte[]>(nullable: true),
-                    MyProperty = table.Column<byte[]>(nullable: true)
+                    PasswordSalt = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -25,7 +25,7 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("MyProperty")
+                    b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("BLOB");
 
                     b.Property<byte[]>("PaswordHash")
