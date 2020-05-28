@@ -12,7 +12,7 @@
     "City": "Bordelonville",
     "Country": "Guinea-Bissau",
     "Photo": {
-      "url": "https://randomuser.me/api/portraits/female/74.jpg"
+      "Url": "https://randomuser.me/api/portraits/female/74.jpg"
     },
     "Recipes": [
       {
@@ -46,7 +46,7 @@
     "City": "Herbster",
     "Country": "Sri Lanka",
     "Photo": {
-      "url": "https://randomuser.me/api/portraits/female/16.jpg"
+      "Url": "https://randomuser.me/api/portraits/female/16.jpg"
     },
     "Recipes": [
       {
@@ -80,7 +80,7 @@
     "City": "Chautauqua",
     "Country": "Madagascar",
     "Photo": {
-      "url": "https://randomuser.me/api/portraits/female/76.jpg"
+      "Url": "https://randomuser.me/api/portraits/female/76.jpg"
     },
     "Recipes": [
       {
@@ -114,7 +114,7 @@
     "City": "Haena",
     "Country": "Christmas Island",
     "Photo": {
-      "url": "https://randomuser.me/api/portraits/female/78.jpg"
+      "Url": "https://randomuser.me/api/portraits/female/78.jpg"
     },
     "Recipes": [
       {
@@ -148,7 +148,7 @@
     "City": "Golconda",
     "Country": "Paraguay",
     "Photo": {
-      "url": "https://randomuser.me/api/portraits/female/72.jpg"
+      "Url": "https://randomuser.me/api/portraits/female/72.jpg"
     },
     "Recipes": [
       {
@@ -182,7 +182,7 @@
       "City": "Avalon",
       "Country": "Haiti",
       "Photo": {
-        "url": "https://randomuser.me/api/portraits/male/76.jpg"
+        "Url": "https://randomuser.me/api/portraits/male/76.jpg"
       },
       "Recipes": [
         {
@@ -216,7 +216,7 @@
       "City": "Holtville",
       "Country": "Argentina",
       "Photo": {
-        "url": "https://randomuser.me/api/portraits/male/60.jpg"
+        "Url": "https://randomuser.me/api/portraits/male/60.jpg"
       },
       "Recipes": [
         {
@@ -250,7 +250,7 @@
       "City": "Brantleyville",
       "Country": "Tuvalu",
       "Photo": {
-        "url": "https://randomuser.me/api/portraits/male/25.jpg"
+        "Url": "https://randomuser.me/api/portraits/male/25.jpg"
       },
       "Recipes": [
         {
@@ -284,7 +284,7 @@
       "City": "Kerby",
       "Country": "Guadeloupe",
       "Photo": {
-        "url": "https://randomuser.me/api/portraits/male/89.jpg"
+        "Url": "https://randomuser.me/api/portraits/male/89.jpg"
       },
       "Recipes": [
         {
@@ -318,7 +318,7 @@
       "City": "Hayden",
       "Country": "Switzerland",
       "Photo": {
-        "url": "https://randomuser.me/api/portraits/male/19.jpg"
+        "Url": "https://randomuser.me/api/portraits/male/19.jpg"
       },
       "Recipes": [
         {
