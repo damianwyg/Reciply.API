@@ -22,7 +22,7 @@ namespace Reciply.API.Data.Repositories
             byte[] passwordHash, passwordSalt;
             GeneratePasswordHash(password, out passwordHash, out passwordSalt); // out -> reference
 
-            user.PaswordHash = passwordHash;
+            user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
 
             await _context.Users.AddAsync(user);
@@ -38,7 +38,7 @@ namespace Reciply.API.Data.Repositories
             if (userFromDb == null)
                 return null;
 
-            if (!VerifyPassword(password, userFromDb.PaswordHash, userFromDb.PasswordSalt))
+            if (!VerifyPassword(password, userFromDb.PasswordHash, userFromDb.PasswordSalt))
                 return null;
 
             return userFromDb;
