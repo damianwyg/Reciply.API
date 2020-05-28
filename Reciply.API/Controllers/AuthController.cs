@@ -58,7 +58,7 @@ namespace Reciply.API.Controllers
             var claims = new[]
             {
                 // token contains Id and username
-                new Claim(ClaimTypes.NameIdentifier, userInRepo.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, userInRepo.UserId.ToString()),
                 new Claim(ClaimTypes.Name, userInRepo.Username)
             };
 
