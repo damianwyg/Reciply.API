@@ -33,7 +33,7 @@ namespace Reciply.API.Data.Repositories
 
         public async Task<User> Login(string username, string password)
         {
-            var userFromDb = await _context.Users.FirstOrDefaultAsync();
+            var userFromDb = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
 
             if (userFromDb == null)
                 return null;
