@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Reciply.API.Data;
+using Reciply.API.Data.Extensions;
 using Reciply.API.Data.Interfaces;
 using Reciply.API.Data.Repositories;
 
@@ -56,6 +57,8 @@ namespace Reciply.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ConfigureExceptionHandler();
 
             app.UseRouting();
 
