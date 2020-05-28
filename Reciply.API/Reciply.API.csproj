@@ -11,6 +11,12 @@
     <Compile Remove="Migrations\20200527091545_InitialAddUser.Designer.cs" />
     <Compile Remove="Migrations\20200528111728_ExtendUserAddRecpieIngredient.cs" />
     <Compile Remove="Migrations\20200528111728_ExtendUserAddRecpieIngredient.Designer.cs" />
+    <Compile Remove="Migrations\20200528113805_AddModelsToDb.cs" />
+    <Compile Remove="Migrations\20200528113805_AddModelsToDb.Designer.cs" />
+    <Compile Remove="Migrations\20200528120543_AddPhotoToUser.cs" />
+    <Compile Remove="Migrations\20200528120543_AddPhotoToUser.Designer.cs" />
+    <Compile Remove="Migrations\20200528121923_FixTypo.cs" />
+    <Compile Remove="Migrations\20200528121923_FixTypo.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
