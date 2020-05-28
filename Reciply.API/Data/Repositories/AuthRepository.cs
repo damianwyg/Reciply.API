@@ -10,9 +10,9 @@ namespace Reciply.API.Data.Repositories
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly DataContext _context;
+        private readonly AppDbContext _context;
 
-        public AuthRepository(DataContext context)
+        public AuthRepository(AppDbContext context)
         {
             _context = context;
         }
