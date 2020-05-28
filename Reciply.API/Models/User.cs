@@ -24,6 +24,8 @@ namespace Reciply.API.Models
         public string City { get; set; }
         public string Country { get; set; }
 
+        public Photo Photo { get; set; }
+
         public ICollection<Recipe> Recipes { get; set; }
     }
 }
