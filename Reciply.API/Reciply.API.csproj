@@ -17,6 +17,10 @@
     <Compile Remove="Migrations\20200528120543_AddPhotoToUser.Designer.cs" />
     <Compile Remove="Migrations\20200528121923_FixTypo.cs" />
     <Compile Remove="Migrations\20200528121923_FixTypo.Designer.cs" />
+    <Compile Remove="Migrations\20200528122059_AddModelsToDb.cs" />
+    <Compile Remove="Migrations\20200528122059_AddModelsToDb.Designer.cs" />
+    <Compile Remove="Migrations\20200528132001_ChangeQuantityInIngredient.cs" />
+    <Compile Remove="Migrations\20200528132001_ChangeQuantityInIngredient.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
