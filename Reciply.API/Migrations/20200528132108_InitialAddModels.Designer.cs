@@ -9,8 +9,8 @@ using Reciply.API.Data;
 namespace Reciply.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200528122059_AddModelsToDb")]
-    partial class AddModelsToDb
+    [Migration("20200528132108_InitialAddModels")]
+    partial class InitialAddModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,8 +27,8 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Quantity")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("RecipeId")
                         .HasColumnType("INTEGER");

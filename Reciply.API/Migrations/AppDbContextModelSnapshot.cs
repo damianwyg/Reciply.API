@@ -25,8 +25,8 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Quantity")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("RecipeId")
                         .HasColumnType("INTEGER");
