@@ -10,6 +10,10 @@ namespace Reciply.API.Data.Interfaces
 
         void Delete<T>(T entity) where T : class;
 
+        Task<Recipe> GetRecipe(int id);
+
+        Task<IEnumerable<Recipe>> GetRecipes();
+
         Task<User> GetUser(int id);
 
         Task<IEnumerable<User>> GetUsers();
