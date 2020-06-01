@@ -1,9 +1,7 @@
 [
   {
     "Username": "Anna",
-    "Gender": "female",
     "Email": "donnabridges@fuelworks.com",
-    "DateOfBirth": "1990-07-07",
     "Password": "password",
     "DisplayName": "Anna",
     "Created": "2017-07-15",
@@ -36,9 +34,7 @@
   },
   {
     "Username": "Lola",
-    "Gender": "female",
     "Email": "andreabridges@fuelworks.com",
-    "DateOfBirth": "1987-02-19",
     "Password": "password",
     "DisplayName": "Lola",
     "Created": "2017-03-01",
@@ -71,9 +67,7 @@
   },
   {
     "Username": "Terrie",
-    "Gender": "female",
     "Email": "terriebridges@fuelworks.com",
-    "DateOfBirth": "1957-04-24",
     "Password": "password",
     "DisplayName": "Terrie",
     "Created": "2017-03-09",
@@ -106,9 +100,7 @@
   },
   {
     "Username": "Thelma",
-    "Gender": "female",
     "Email": "thelmabridges@fuelworks.com",
-    "DateOfBirth": "1952-10-20",
     "Password": "password",
     "DisplayName": "Thelma",
     "Created": "2017-02-11",
@@ -141,9 +133,7 @@
   },
   {
     "Username": "Vera",
-    "Gender": "female",
     "Email": "verabridges@fuelworks.com",
-    "DateOfBirth": "1952-10-21",
     "Password": "password",
     "DisplayName": "Vera",
     "Created": "2017-02-20",
@@ -176,9 +166,7 @@
   },
     {
       "Username": "Duke",
-      "Gender": "male",
       "Email": "dukeferrell@telpod.com",
-      "DateOfBirth": "1959-12-17",
       "Password": "password",
       "DisplayName": "Duke",
       "Created": "2017-08-27",
@@ -211,9 +199,7 @@
     },
     {
       "Username": "Bob",
-      "Gender": "male",
       "Email": "smithferrell@telpod.com",
-      "DateOfBirth": "1983-07-08",
       "Password": "password",
       "DisplayName": "Bob",
       "Created": "2017-06-30",
@@ -246,9 +232,7 @@
     },
     {
       "Username": "Neal",
-      "Gender": "male",
       "Email": "nealferrell@telpod.com",
-      "DateOfBirth": "1992-04-08",
       "Password": "password",
       "DisplayName": "Neal",
       "Created": "2017-04-11",
@@ -281,9 +265,7 @@
     },
     {
       "Username": "Buck",
-      "Gender": "male",
       "Email": "buckferrell@telpod.com",
-      "DateOfBirth": "1965-08-11",
       "Password": "password",
       "DisplayName": "Buck",
       "Created": "2017-04-30",
@@ -316,9 +298,7 @@
     },
     {
       "Username": "Sweeney",
-      "Gender": "male",
       "Email": "sweeneyferrell@telpod.com",
-      "DateOfBirth": "1978-06-08",
       "Password": "password",
       "DisplayName": "Sweeney",
       "Created": "2017-05-19",

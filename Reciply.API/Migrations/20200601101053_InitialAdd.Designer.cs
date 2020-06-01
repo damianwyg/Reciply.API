@@ -9,8 +9,8 @@ using Reciply.API.Data;
 namespace Reciply.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200601084115_AddUrlToRecipe")]
-    partial class AddUrlToRecipe
+    [Migration("20200601101053_InitialAdd")]
+    partial class InitialAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -112,16 +112,10 @@ namespace Reciply.API.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("DisplayName")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Gender")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("LastActive")

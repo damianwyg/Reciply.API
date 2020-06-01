@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Reciply.API.Migrations
 {
-    public partial class InitialAddModels : Migration
+    public partial class InitialAdd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,10 +17,8 @@ namespace Reciply.API.Migrations
                     Email = table.Column<string>(nullable: true),
                     PasswordHash = table.Column<byte[]>(nullable: true),
                     PasswordSalt = table.Column<byte[]>(nullable: true),
-                    DateOfBirth = table.Column<DateTime>(nullable: false),
                     Created = table.Column<DateTime>(nullable: false),
                     LastActive = table.Column<DateTime>(nullable: false),
-                    Gender = table.Column<string>(nullable: true),
                     DisplayName = table.Column<string>(nullable: true),
                     AboutMe = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
@@ -58,6 +56,7 @@ namespace Reciply.API.Migrations
                     RecipeId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
+                    Url = table.Column<string>(nullable: true),
                     Preparation = table.Column<string>(nullable: true),
                     IsVegetarian = table.Column<bool>(nullable: false),
                     IsVegan = table.Column<bool>(nullable: false),
