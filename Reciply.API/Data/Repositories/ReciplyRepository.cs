@@ -27,14 +27,14 @@ namespace Reciply.API.Data.Repositories
 
         public async Task<Recipe> GetRecipe(int id)
         {
-            var recipe = await _context.Recipes.Include(i => i.Ingredients).FirstOrDefaultAsync(r => r.RecipeId == id);
+            var recipe = await _context.Recipes.Include(i => i.Ingredients).ThenInclude(n => n.IngredientName).FirstOrDefaultAsync(r => r.RecipeId == id);
 
             return recipe;
         }
 
         public async Task<IEnumerable<Recipe>> GetRecipes()
         {
-            var recipes = await _context.Recipes.Include(i => i.Ingredients).ToListAsync();
+            var recipes = await _context.Recipes.Include(i => i.Ingredients).ThenInclude(n => n.IngredientName).ToListAsync();
 
             return recipes;
         }

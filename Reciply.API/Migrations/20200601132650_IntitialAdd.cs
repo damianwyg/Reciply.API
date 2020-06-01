@@ -3,10 +3,23 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Reciply.API.Migrations
 {
-    public partial class InitialAdd : Migration
+    public partial class IntitialAdd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "IngredientNames",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IngredientNames", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -60,14 +73,20 @@ namespace Reciply.API.Migrations
                 {
                     IngredientId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: true),
                     Quantity = table.Column<int>(nullable: false),
                     Unit = table.Column<string>(nullable: true),
+                    IngredientNameId = table.Column<int>(nullable: false),
                     RecipeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ingredients", x => x.IngredientId);
+                    table.ForeignKey(
+                        name: "FK_Ingredients_IngredientNames_IngredientNameId",
+                        column: x => x.IngredientNameId,
+                        principalTable: "IngredientNames",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ingredients_Recipes_RecipeId",
                         column: x => x.RecipeId,
@@ -75,6 +94,11 @@ namespace Reciply.API.Migrations
                         principalColumn: "RecipeId",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingredients_IngredientNameId",
+                table: "Ingredients",
+                column: "IngredientNameId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_RecipeId",
@@ -91,6 +115,9 @@ namespace Reciply.API.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Ingredients");
+
+            migrationBuilder.DropTable(
+                name: "IngredientNames");
 
             migrationBuilder.DropTable(
                 name: "Recipes");

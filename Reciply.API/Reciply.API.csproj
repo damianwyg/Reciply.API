@@ -27,6 +27,8 @@
     <Compile Remove="Migrations\20200601084115_AddUrlToRecipe.Designer.cs" />
     <Compile Remove="Migrations\20200601101053_InitialAdd.cs" />
     <Compile Remove="Migrations\20200601101053_InitialAdd.Designer.cs" />
+    <Compile Remove="Migrations\20200601111643_InitialAdd.cs" />
+    <Compile Remove="Migrations\20200601111643_InitialAdd.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
