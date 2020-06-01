@@ -9,9 +9,7 @@
     "AboutMe": "Quis ex dolore eu labore eu voluptate velit occaecat. Sit consectetur non pariatur tempor quis ut magna. Aliqua labore non ex ullamco proident nostrud do ea aliquip laborum. Magna non eiusmod adipisicing aute et nisi voluptate laboris aute eiusmod. Elit nulla eiusmod et adipisicing labore excepteur. Laboris ullamco qui amet amet sint aliquip aliquip ea culpa pariatur mollit velit.\r\n",
     "City": "Bordelonville",
     "Country": "Guinea-Bissau",
-    "Photo": {
-      "Url": "https://randomuser.me/api/portraits/female/74.jpg"
-    },
+    "AvatarUrl": "https://randomuser.me/api/portraits/female/74.jpg",
     "Recipes": [
       {
         "Name": "Recipe24",
@@ -42,9 +40,7 @@
     "AboutMe": "Ad incididunt laboris ad nisi aliqua laboris magna id. Ut fugiat magna consectetur enim amet incididunt culpa nisi aute. Fugiat elit ullamco est ullamco est. Ad excepteur ad ut aute do dolore do elit duis veniam dolor elit nostrud. Aliquip elit nostrud proident ut mollit eiusmod do cillum nisi veniam mollit do. Laborum dolor mollit tempor aliqua officia ad exercitation veniam. Aute ipsum culpa aute ea id non labore ullamco do.\r\n",
     "City": "Herbster",
     "Country": "Sri Lanka",
-    "Photo": {
-      "Url": "https://randomuser.me/api/portraits/female/16.jpg"
-    },
+    "AvatarUrl": "https://randomuser.me/api/portraits/female/16.jpg",
     "Recipes": [
       {
         "Name": "Recipe2",
@@ -75,9 +71,7 @@
     "AboutMe": "Tempor cillum labore elit eiusmod est nulla. Consectetur amet aliqua velit labore voluptate ex ex ipsum. Sunt incididunt est tempor magna elit incididunt do Lorem in dolore. Ad minim ullamco consequat Lorem aliqua culpa culpa non minim excepteur. Quis labore tempor quis do culpa laboris irure veniam deserunt esse ullamco magna. Veniam reprehenderit occaecat nulla et eu adipisicing aute velit et dolore. Nisi laborum duis nostrud elit sit elit sit dolor nisi culpa nulla.\r\n",
     "City": "Chautauqua",
     "Country": "Madagascar",
-    "Photo": {
-      "Url": "https://randomuser.me/api/portraits/female/76.jpg"
-    },
+    "AvatarUrl": "https://randomuser.me/api/portraits/female/76.jpg",
     "Recipes": [
       {
         "Name": "Recipe53",
@@ -108,9 +102,7 @@
     "AboutMe": "Nostrud et mollit do proident. Ad culpa reprehenderit incididunt amet. Ut culpa do mollit enim. Aute esse incididunt excepteur culpa exercitation nisi dolor officia. Veniam dolor nostrud consequat aliqua esse fugiat sint in cillum laboris. Voluptate cupidatat id eiusmod id adipisicing reprehenderit mollit eu laborum ad aliqua. Lorem fugiat pariatur eu nisi amet fugiat cillum aliqua labore ad velit nulla ea.\r\n",
     "City": "Haena",
     "Country": "Christmas Island",
-    "Photo": {
-      "Url": "https://randomuser.me/api/portraits/female/78.jpg"
-    },
+    "AvatarUrl": "https://randomuser.me/api/portraits/female/78.jpg",
     "Recipes": [
       {
         "Name": "Recipe41",
@@ -141,9 +133,7 @@
     "AboutMe": "Ut excepteur cupidatat mollit culpa aliqua. Proident nostrud commodo magna commodo adipisicing dolore mollit excepteur consectetur ut ex cillum. Et eu duis esse mollit ad laboris veniam dolor veniam. Non esse nulla proident mollit et mollit. Qui pariatur id est deserunt laboris incididunt mollit sint. Consectetur Lorem sit laborum Lorem exercitation. Est voluptate dolor duis sunt id eu nostrud aliqua veniam sint ea.\r\n",
     "City": "Golconda",
     "Country": "Paraguay",
-    "Photo": {
-      "Url": "https://randomuser.me/api/portraits/female/72.jpg"
-    },
+    "AvatarUrl": "https://randomuser.me/api/portraits/female/72.jpg",
     "Recipes": [
       {
         "Name": "Recipe56",
@@ -164,169 +154,159 @@
       }
     ]
   },
-    {
-      "Username": "Duke",
-      "Email": "dukeferrell@telpod.com",
-      "Password": "password",
-      "DisplayName": "Duke",
-      "Created": "2017-08-27",
-      "LastActive": "2017-08-27",
-      "AboutMe": "Exercitation Lorem voluptate eu dolor elit voluptate ullamco nisi excepteur officia. Qui elit aliqua esse irure proident occaecat in. Nostrud veniam aliqua fugiat officia. Magna incididunt minim duis amet occaecat. Esse Lorem pariatur non irure. Culpa officia ex laboris eu velit sit est eiusmod ut reprehenderit fugiat dolore cupidatat. Esse duis voluptate sunt eiusmod anim minim nostrud aliqua ipsum commodo et cupidatat consectetur fugiat.\r\n",
-      "City": "Avalon",
-      "Country": "Haiti",
-      "Photo": {
-        "Url": "https://randomuser.me/api/portraits/male/76.jpg"
-      },
-      "Recipes": [
-        {
-          "Name": "Recipe90",
-          "Url": "https://source.unsplash.com/collection/190727/800x600",
-          "Preparation": "Nostrud laboris Lorem labore culpa. Incididunt aute non nostrud et duis. Pariatur aliqua ipsum nulla est. Proident consequat eiusmod esse mollit do amet commodo Lorem enim adipisicing occaecat elit tempor consequat.\r\n",
-          "Ingredients": [
-            {
-              "Name": "Chilli",
-              "Quantity": 85,
-              "Unit": "g"
-            },
-            {
-              "Name": "Wine",
-              "Quantity": 80,
-              "Unit": "ml"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Username": "Bob",
-      "Email": "smithferrell@telpod.com",
-      "Password": "password",
-      "DisplayName": "Bob",
-      "Created": "2017-06-30",
-      "LastActive": "2017-06-30",
-      "AboutMe": "Nisi elit dolore eiusmod anim ullamco esse adipisicing voluptate esse tempor aliquip. Reprehenderit aute deserunt dolor aute cillum esse quis minim quis excepteur. Sint consequat nisi voluptate minim non eiusmod nisi commodo laborum cillum. Laborum nostrud laboris laboris exercitation dolor ullamco est laboris labore occaecat nulla duis.\r\n",
-      "City": "Holtville",
-      "Country": "Argentina",
-      "Photo": {
-        "Url": "https://randomuser.me/api/portraits/male/60.jpg"
-      },
-      "Recipes": [
-        {
-          "Name": "Recipe20",
-          "Url": "https://source.unsplash.com/collection/190727/800x600",
-          "Preparation": "Eiusmod reprehenderit irure consequat ut commodo. Cupidatat cillum reprehenderit et laborum. Ex fugiat magna consequat voluptate officia irure aute ullamco aute qui pariatur. Aliquip consectetur cillum commodo dolore laboris excepteur sunt pariatur labore nostrud. Ex veniam dolor nostrud fugiat eiusmod ea. Aute excepteur culpa nostrud occaecat quis proident.\r\n",
-          "Ingredients": [
-            {
-              "Name": "Chilli",
-              "Quantity": 87,
-              "Unit": "g"
-            },
-            {
-              "Name": "Wine",
-              "Quantity": 12,
-              "Unit": "ml"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Username": "Neal",
-      "Email": "nealferrell@telpod.com",
-      "Password": "password",
-      "DisplayName": "Neal",
-      "Created": "2017-04-11",
-      "LastActive": "2017-04-11",
-      "AboutMe": "Aliqua voluptate do officia aute cillum deserunt. Qui et ex occaecat Lorem mollit veniam do. Ea consectetur aliquip nulla minim.\r\n",
-      "City": "Brantleyville",
-      "Country": "Tuvalu",
-      "Photo": {
-        "Url": "https://randomuser.me/api/portraits/male/25.jpg"
-      },
-      "Recipes": [
-        {
-          "Name": "Recipe75",
-          "Url": "https://source.unsplash.com/collection/190727/800x600",
-          "Preparation": "Aliquip commodo amet ea ut cillum sit ipsum non. Occaecat consequat ea qui deserunt minim ad proident occaecat quis labore aliquip ut excepteur. Consequat aliqua ad laboris do ipsum quis. Do consequat eu ut quis commodo.\r\n",
-          "Ingredients": [
-            {
-              "Name": "Chilli",
-              "Quantity": 40,
-              "Unit": "g"
-            },
-            {
-              "Name": "Wine",
-              "Quantity": 83,
-              "Unit": "ml"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Username": "Buck",
-      "Email": "buckferrell@telpod.com",
-      "Password": "password",
-      "DisplayName": "Buck",
-      "Created": "2017-04-30",
-      "LastActive": "2017-04-30",
-      "AboutMe": "Nostrud incididunt veniam pariatur mollit reprehenderit ea qui minim aliqua elit ullamco qui veniam. Ex dolor exercitation cupidatat minim minim. Proident duis eiusmod excepteur eiusmod ut. Do pariatur excepteur enim reprehenderit labore labore laboris tempor do enim voluptate aute aute ut. Esse officia fugiat cillum incididunt quis exercitation aute. Mollit qui ex ea nulla nostrud.\r\n",
-      "City": "Kerby",
-      "Country": "Guadeloupe",
-      "Photo": {
-        "Url": "https://randomuser.me/api/portraits/male/89.jpg"
-      },
-      "Recipes": [
-        {
-          "Name": "Recipe54",
-          "Url": "https://source.unsplash.com/collection/190727/800x600",
-          "Preparation": "Dolor enim ex mollit anim nisi laborum cillum sit. In incididunt sint irure officia. Exercitation ipsum fugiat voluptate velit cupidatat exercitation sunt mollit. Voluptate labore aliquip fugiat fugiat pariatur cillum.\r\n",
-          "Ingredients": [
-            {
-              "Name": "Chilli",
-              "Quantity": 94,
-              "Unit": "g"
-            },
-            {
-              "Name": "Wine",
-              "Quantity": 96,
-              "Unit": "ml"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Username": "Sweeney",
-      "Email": "sweeneyferrell@telpod.com",
-      "Password": "password",
-      "DisplayName": "Sweeney",
-      "Created": "2017-05-19",
-      "LastActive": "2017-05-19",
-      "AboutMe": "Esse pariatur culpa officia sit reprehenderit et aliqua non. Elit in sunt consequat reprehenderit non cupidatat. Irure irure incididunt aute elit tempor. Cillum enim mollit qui velit qui officia incididunt minim. Aute elit dolore sint adipisicing Lorem mollit id qui aliqua aute. Adipisicing fugiat eu nisi tempor consequat esse nostrud.\r\n",
-      "City": "Hayden",
-      "Country": "Switzerland",
-      "Photo": {
-        "Url": "https://randomuser.me/api/portraits/male/19.jpg"
-      },
-      "Recipes": [
-        {
-          "Name": "Recipe23",
-          "Url": "https://source.unsplash.com/collection/190727/800x600",
-          "Preparation": "Magna labore nostrud consequat nisi dolor minim ipsum commodo ea sit reprehenderit elit Lorem exercitation. Ipsum laborum et eiusmod sit dolor dolor fugiat ullamco. Sint cillum sit elit qui ea dolore in incididunt laborum. Tempor enim fugiat elit et. Id consectetur in anim ullamco aliqua ut veniam eiusmod consectetur adipisicing veniam deserunt sunt adipisicing.\r\n",
-          "Ingredients": [
-            {
-              "Name": "Chilli",
-              "Quantity": 77,
-              "Unit": "g"
-            },
-            {
-              "Name": "Wine",
-              "Quantity": 68,
-              "Unit": "ml"
-            }
-          ]
-        }
-      ]
-    }
+  {
+    "Username": "Duke",
+    "Email": "dukeferrell@telpod.com",
+    "Password": "password",
+    "DisplayName": "Duke",
+    "Created": "2017-08-27",
+    "LastActive": "2017-08-27",
+    "AboutMe": "Exercitation Lorem voluptate eu dolor elit voluptate ullamco nisi excepteur officia. Qui elit aliqua esse irure proident occaecat in. Nostrud veniam aliqua fugiat officia. Magna incididunt minim duis amet occaecat. Esse Lorem pariatur non irure. Culpa officia ex laboris eu velit sit est eiusmod ut reprehenderit fugiat dolore cupidatat. Esse duis voluptate sunt eiusmod anim minim nostrud aliqua ipsum commodo et cupidatat consectetur fugiat.\r\n",
+    "City": "Avalon",
+    "Country": "Haiti",
+    "AvatarUrl": "https://randomuser.me/api/portraits/male/76.jpg",
+    "Recipes": [
+      {
+        "Name": "Recipe90",
+        "Url": "https://source.unsplash.com/collection/190727/800x600",
+        "Preparation": "Nostrud laboris Lorem labore culpa. Incididunt aute non nostrud et duis. Pariatur aliqua ipsum nulla est. Proident consequat eiusmod esse mollit do amet commodo Lorem enim adipisicing occaecat elit tempor consequat.\r\n",
+        "Ingredients": [
+          {
+            "Name": "Chilli",
+            "Quantity": 85,
+            "Unit": "g"
+          },
+          {
+            "Name": "Wine",
+            "Quantity": 80,
+            "Unit": "ml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Username": "Bob",
+    "Email": "smithferrell@telpod.com",
+    "Password": "password",
+    "DisplayName": "Bob",
+    "Created": "2017-06-30",
+    "LastActive": "2017-06-30",
+    "AboutMe": "Nisi elit dolore eiusmod anim ullamco esse adipisicing voluptate esse tempor aliquip. Reprehenderit aute deserunt dolor aute cillum esse quis minim quis excepteur. Sint consequat nisi voluptate minim non eiusmod nisi commodo laborum cillum. Laborum nostrud laboris laboris exercitation dolor ullamco est laboris labore occaecat nulla duis.\r\n",
+    "City": "Holtville",
+    "Country": "Argentina",
+    "AvatarUrl": "https://randomuser.me/api/portraits/male/60.jpg",
+    "Recipes": [
+      {
+        "Name": "Recipe20",
+        "Url": "https://source.unsplash.com/collection/190727/800x600",
+        "Preparation": "Eiusmod reprehenderit irure consequat ut commodo. Cupidatat cillum reprehenderit et laborum. Ex fugiat magna consequat voluptate officia irure aute ullamco aute qui pariatur. Aliquip consectetur cillum commodo dolore laboris excepteur sunt pariatur labore nostrud. Ex veniam dolor nostrud fugiat eiusmod ea. Aute excepteur culpa nostrud occaecat quis proident.\r\n",
+        "Ingredients": [
+          {
+            "Name": "Chilli",
+            "Quantity": 87,
+            "Unit": "g"
+          },
+          {
+            "Name": "Wine",
+            "Quantity": 12,
+            "Unit": "ml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Username": "Neal",
+    "Email": "nealferrell@telpod.com",
+    "Password": "password",
+    "DisplayName": "Neal",
+    "Created": "2017-04-11",
+    "LastActive": "2017-04-11",
+    "AboutMe": "Aliqua voluptate do officia aute cillum deserunt. Qui et ex occaecat Lorem mollit veniam do. Ea consectetur aliquip nulla minim.\r\n",
+    "City": "Brantleyville",
+    "Country": "Tuvalu",
+    "AvatarUrl": "https://randomuser.me/api/portraits/male/25.jpg",
+    "Recipes": [
+      {
+        "Name": "Recipe75",
+        "Url": "https://source.unsplash.com/collection/190727/800x600",
+        "Preparation": "Aliquip commodo amet ea ut cillum sit ipsum non. Occaecat consequat ea qui deserunt minim ad proident occaecat quis labore aliquip ut excepteur. Consequat aliqua ad laboris do ipsum quis. Do consequat eu ut quis commodo.\r\n",
+        "Ingredients": [
+          {
+            "Name": "Chilli",
+            "Quantity": 40,
+            "Unit": "g"
+          },
+          {
+            "Name": "Wine",
+            "Quantity": 83,
+            "Unit": "ml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Username": "Buck",
+    "Email": "buckferrell@telpod.com",
+    "Password": "password",
+    "DisplayName": "Buck",
+    "Created": "2017-04-30",
+    "LastActive": "2017-04-30",
+    "AboutMe": "Nostrud incididunt veniam pariatur mollit reprehenderit ea qui minim aliqua elit ullamco qui veniam. Ex dolor exercitation cupidatat minim minim. Proident duis eiusmod excepteur eiusmod ut. Do pariatur excepteur enim reprehenderit labore labore laboris tempor do enim voluptate aute aute ut. Esse officia fugiat cillum incididunt quis exercitation aute. Mollit qui ex ea nulla nostrud.\r\n",
+    "City": "Kerby",
+    "Country": "Guadeloupe",
+    "AvatarUrl": "https://randomuser.me/api/portraits/male/89.jpg",
+    "Recipes": [
+      {
+        "Name": "Recipe54",
+        "Url": "https://source.unsplash.com/collection/190727/800x600",
+        "Preparation": "Dolor enim ex mollit anim nisi laborum cillum sit. In incididunt sint irure officia. Exercitation ipsum fugiat voluptate velit cupidatat exercitation sunt mollit. Voluptate labore aliquip fugiat fugiat pariatur cillum.\r\n",
+        "Ingredients": [
+          {
+            "Name": "Chilli",
+            "Quantity": 94,
+            "Unit": "g"
+          },
+          {
+            "Name": "Wine",
+            "Quantity": 96,
+            "Unit": "ml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Username": "Sweeney",
+    "Email": "sweeneyferrell@telpod.com",
+    "Password": "password",
+    "DisplayName": "Sweeney",
+    "Created": "2017-05-19",
+    "LastActive": "2017-05-19",
+    "AboutMe": "Esse pariatur culpa officia sit reprehenderit et aliqua non. Elit in sunt consequat reprehenderit non cupidatat. Irure irure incididunt aute elit tempor. Cillum enim mollit qui velit qui officia incididunt minim. Aute elit dolore sint adipisicing Lorem mollit id qui aliqua aute. Adipisicing fugiat eu nisi tempor consequat esse nostrud.\r\n",
+    "City": "Hayden",
+    "Country": "Switzerland",
+    "AvatarUrl": "https://randomuser.me/api/portraits/male/19.jpg",
+    "Recipes": [
+      {
+        "Name": "Recipe23",
+        "Url": "https://source.unsplash.com/collection/190727/800x600",
+        "Preparation": "Magna labore nostrud consequat nisi dolor minim ipsum commodo ea sit reprehenderit elit Lorem exercitation. Ipsum laborum et eiusmod sit dolor dolor fugiat ullamco. Sint cillum sit elit qui ea dolore in incididunt laborum. Tempor enim fugiat elit et. Id consectetur in anim ullamco aliqua ut veniam eiusmod consectetur adipisicing veniam deserunt sunt adipisicing.\r\n",
+        "Ingredients": [
+          {
+            "Name": "Chilli",
+            "Quantity": 77,
+            "Unit": "g"
+          },
+          {
+            "Name": "Wine",
+            "Quantity": 68,
+            "Unit": "ml"
+          }
+        ]
+      }
+    ]
+  }
   ]

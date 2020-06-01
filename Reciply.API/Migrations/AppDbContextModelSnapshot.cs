@@ -41,26 +41,6 @@ namespace Reciply.API.Migrations
                     b.ToTable("Ingredients");
                 });
 
-            modelBuilder.Entity("Reciply.API.Models.Photo", b =>
-                {
-                    b.Property<int>("PhotoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Url")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("PhotoId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("Photo");
-                });
-
             modelBuilder.Entity("Reciply.API.Models.Recipe", b =>
                 {
                     b.Property<int>("RecipeId")
@@ -101,6 +81,9 @@ namespace Reciply.API.Migrations
                     b.Property<string>("AboutMe")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("AvatarUrl")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("City")
                         .HasColumnType("TEXT");
 
@@ -138,15 +121,6 @@ namespace Reciply.API.Migrations
                     b.HasOne("Reciply.API.Models.Recipe", "Recipe")
                         .WithMany("Ingredients")
                         .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Reciply.API.Models.Photo", b =>
-                {
-                    b.HasOne("Reciply.API.Models.User", "User")
-                        .WithOne("Photo")
-                        .HasForeignKey("Reciply.API.Models.Photo", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
