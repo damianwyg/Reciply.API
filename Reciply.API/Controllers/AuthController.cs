@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -19,32 +16,13 @@ namespace Reciply.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthRepository _repo;
         private readonly IConfiguration _config;
+        private readonly IAuthRepository _repo;
 
         public AuthController(IAuthRepository repo, IConfiguration config)
         {
             _repo = repo;
             _config = config;
-        }
-
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
-        {
-            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
-
-            if (await _repo.UserExists(userForRegisterDto.Username))
-                return BadRequest("User already exists");
-
-            var userToSave = new User
-            {
-                Username = userForRegisterDto.Username,
-                Email = userForRegisterDto.Email
-            };
-
-            var userSaved = await _repo.Register(userToSave, userForRegisterDto.Password);
-
-            return StatusCode(201);
         }
 
         [HttpPost("login")]
@@ -78,10 +56,29 @@ namespace Reciply.API.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new 
+            return Ok(new
             {
                 token = tokenHandler.WriteToken(token)
             });
+        }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
+        {
+            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
+
+            if (await _repo.UserExists(userForRegisterDto.Username))
+                return BadRequest("User already exists");
+
+            var userToSave = new User
+            {
+                Username = userForRegisterDto.Username,
+                Email = userForRegisterDto.Email
+            };
+
+            var userSaved = await _repo.Register(userToSave, userForRegisterDto.Password);
+
+            return StatusCode(201);
         }
     }
 }
