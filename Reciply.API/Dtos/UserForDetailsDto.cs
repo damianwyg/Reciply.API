@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Reciply.API.Models;
 
 namespace Reciply.API.Dtos
 {
@@ -20,6 +17,6 @@ namespace Reciply.API.Dtos
         public string Country { get; set; }
         public string AvatarUrl { get; set; }
 
-        public ICollection<Recipe> Recipes { get; set; }
+        public ICollection<RecipeForUserListingDto> Recipes { get; set; }
     }
 }
