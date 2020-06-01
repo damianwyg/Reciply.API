@@ -27,7 +27,7 @@ namespace Reciply.API.Data.Extensions
                         await context.Response.WriteAsync(new ErrorDetails()
                         {
                             StatusCode = context.Response.StatusCode,
-                            Message = contextFeature.Error.Message
+                            Message = "Server Error"
                         }.ToString()) ;
                     }
                 });
