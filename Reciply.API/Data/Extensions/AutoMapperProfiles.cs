@@ -8,7 +8,10 @@ namespace Reciply.API.Data.Extensions
     {
         public AutoMapperProfiles()
         {
-            CreateMap<User, UserForListingDto>();
+            CreateMap<User, UserForListingDto>()
+                .ForMember(dest => dest.RecipesCount, opt => {
+                    opt.MapFrom(src => src.Recipes.Count);
+                });
             CreateMap<User, UserForDetailsDto>();
             CreateMap<Recipe, RecipeForUserListingDto>();
             CreateMap<Recipe, RecipeForDetailsDto>();

@@ -17,5 +17,6 @@ namespace Reciply.API.Dtos
         public string City { get; set; }
         public string Country { get; set; }
         public string AvatarUrl { get; set; }
+        public int RecipesCount { get; set; }
     }
 }
