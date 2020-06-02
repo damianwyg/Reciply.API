@@ -39,5 +39,13 @@ namespace Reciply.API.Controllers
 
             return Ok(recipesToReturn);
         }
+
+        [HttpGet("ingredients")]
+        public async Task<IActionResult> GetIngredients()
+        {
+            var ingredients = await _repo.GetIngredientNames();
+
+            return Ok(ingredients);
+        }
     }
 }
