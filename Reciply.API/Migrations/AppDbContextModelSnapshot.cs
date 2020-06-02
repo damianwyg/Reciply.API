@@ -72,10 +72,10 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Preparation")
+                    b.Property<string>("PhotoUrl")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Preparation")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Reciply.API.Migrations
 {
-    public partial class IntitialAdd : Migration
+    public partial class InitialAdd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,7 +50,7 @@ namespace Reciply.API.Migrations
                     RecipeId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
-                    Url = table.Column<string>(nullable: true),
+                    PhotoUrl = table.Column<string>(nullable: true),
                     Preparation = table.Column<string>(nullable: true),
                     IsVegetarian = table.Column<bool>(nullable: false),
                     IsVegan = table.Column<bool>(nullable: false),

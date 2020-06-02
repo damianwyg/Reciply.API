@@ -9,8 +9,8 @@ using Reciply.API.Data;
 namespace Reciply.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200601132650_IntitialAdd")]
-    partial class IntitialAdd
+    [Migration("20200602091607_InitialAdd")]
+    partial class InitialAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,10 +74,10 @@ namespace Reciply.API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Preparation")
+                    b.Property<string>("PhotoUrl")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Preparation")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
