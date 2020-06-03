@@ -9,7 +9,7 @@ using Reciply.API.Models;
 
 namespace Reciply.API.Controllers
 {
-    [Route("api/users/{userId}/recipes")]
+    [Route("api/[controller]")]
     [ApiController]
     public class RecipesController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace Reciply.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost("add")]
+        [HttpPost("users/{userId}/add")]
         public async Task<IActionResult> AddRecipe(int userId, RecipeForAddDto recipeForAddDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
