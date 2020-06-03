@@ -33,6 +33,8 @@
     <Compile Remove="Migrations\20200601132650_IntitialAdd.Designer.cs" />
     <Compile Remove="Migrations\20200602091422_RenameUrlInRecipe.cs" />
     <Compile Remove="Migrations\20200602091422_RenameUrlInRecipe.Designer.cs" />
+    <Compile Remove="Migrations\20200602091607_InitialAdd.cs" />
+    <Compile Remove="Migrations\20200602091607_InitialAdd.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

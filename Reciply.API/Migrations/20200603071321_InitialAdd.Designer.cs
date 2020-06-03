@@ -9,7 +9,7 @@ using Reciply.API.Data;
 namespace Reciply.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200602091607_InitialAdd")]
+    [Migration("20200603071321_InitialAdd")]
     partial class InitialAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,8 +24,8 @@ namespace Reciply.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("IngredientNameId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
@@ -38,25 +38,9 @@ namespace Reciply.API.Migrations
 
                     b.HasKey("IngredientId");
 
-                    b.HasIndex("IngredientNameId");
-
                     b.HasIndex("RecipeId");
 
                     b.ToTable("Ingredients");
-                });
-
-            modelBuilder.Entity("Reciply.API.Models.IngredientName", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("IngredientNames");
                 });
 
             modelBuilder.Entity("Reciply.API.Models.Recipe", b =>
@@ -136,12 +120,6 @@ namespace Reciply.API.Migrations
 
             modelBuilder.Entity("Reciply.API.Models.Ingredient", b =>
                 {
-                    b.HasOne("Reciply.API.Models.IngredientName", "IngredientName")
-                        .WithMany()
-                        .HasForeignKey("IngredientNameId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Reciply.API.Models.Recipe", "Recipe")
                         .WithMany("Ingredients")
                         .HasForeignKey("RecipeId")

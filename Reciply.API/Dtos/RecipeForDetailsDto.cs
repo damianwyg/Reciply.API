@@ -18,6 +18,6 @@ namespace Reciply.API.Dtos
 
         public int UserId { get; set; }
 
-        public ICollection<IngredientForDetailsDto> Ingredients { get; set; }
+        public ICollection<Ingredient> Ingredients { get; set; }
     }
 }
