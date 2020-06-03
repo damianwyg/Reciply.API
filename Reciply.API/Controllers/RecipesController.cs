@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Reciply.API.Data.Interfaces;
 using Reciply.API.Dtos;
+using Reciply.API.Models;
 
 namespace Reciply.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users/{userId}/recipes")]
     [ApiController]
     public class RecipesController : ControllerBase
     {
@@ -18,6 +20,26 @@ namespace Reciply.API.Controllers
         {
             _repo = repo;
             _mapper = mapper;
+        }
+
+        [HttpPost("add")]
+        public async Task<IActionResult> AddRecipe(int userId, RecipeForAddDto recipeForAddDto)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var userFromRepo = await _repo.GetUser(userId);
+
+            var recipeToCreate = _mapper.Map<Recipe>(recipeForAddDto);
+
+            userFromRepo.Recipes.Add(recipeToCreate);
+
+            if (await _repo.SaveAllChanges())
+            {
+                return StatusCode(201);
+            }
+
+            return BadRequest();
         }
 
         [HttpGet("{id}")]
