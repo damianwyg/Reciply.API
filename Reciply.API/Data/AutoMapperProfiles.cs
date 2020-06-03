@@ -20,6 +20,7 @@ namespace Reciply.API.Data.Extensions
             CreateMap<Ingredient, IngredientForRecipeDetailsDto>();
             CreateMap<RecipeForAddDto, Recipe>();
             CreateMap<IngredientForRecipeAddDto, Ingredient>();
+            CreateMap<RecipeForUpdateDto, Recipe>();
         }
     }
 }

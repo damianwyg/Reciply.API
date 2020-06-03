@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -23,7 +23,7 @@ namespace Reciply.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost("users/{userId}/add")]
+        [HttpPost("users/{userId}")]
         public async Task<IActionResult> AddRecipe(int userId, RecipeForAddDto recipeForAddDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
@@ -36,11 +36,9 @@ namespace Reciply.API.Controllers
             userFromRepo.Recipes.Add(recipeToCreate);
 
             if (await _repo.SaveAllChanges())
-            {
-                return StatusCode(201);
-            }
+                return NoContent();
 
-            return BadRequest();
+            throw new Exception($"Adding recipe {userId} failed on save");
         }
 
         [HttpGet("{id}")]
@@ -65,6 +63,22 @@ namespace Reciply.API.Controllers
             var recipesToReturn = _mapper.Map<IEnumerable<RecipeForDetailsDto>>(recipesFromRepo);
 
             return Ok(recipesToReturn);
+        }
+
+        [HttpPut("users/{userId}/{recipeId}")]
+        public async Task<IActionResult> UpdateRecipe(int recipeId, int userId, RecipeForUpdateDto recipeForUpdateDto)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var recipeFromRepo = await _repo.GetRecipe(recipeId);
+
+            var recipe = _mapper.Map(recipeForUpdateDto, recipeFromRepo);
+
+            if (await _repo.SaveAllChanges())
+                return NoContent();
+
+            throw new Exception($"Updating recipe {recipeId} failed on save");
         }
     }
 }
