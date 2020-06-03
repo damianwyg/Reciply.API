@@ -17,6 +17,8 @@ namespace Reciply.API.Dtos
         public bool IsVegan { get; set; }
 
         public int UserId { get; set; }
+        public string AvatarUrl { get; set; }
+        public string DisplayName { get; set; }
 
         public ICollection<IngredientForRecipeDetailsDto> Ingredients { get; set; }
     }

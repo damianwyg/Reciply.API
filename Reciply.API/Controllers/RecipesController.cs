@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -46,8 +47,12 @@ namespace Reciply.API.Controllers
         public async Task<IActionResult> GetRecipe(int id)
         {
             var recipeFromRepo = await _repo.GetRecipe(id);
+            var userFromRepo = await _repo.GetUser(recipeFromRepo.UserId);
 
             var recipeToReturn = _mapper.Map<RecipeForDetailsDto>(recipeFromRepo);
+
+            recipeToReturn.AvatarUrl = userFromRepo.AvatarUrl;
+            recipeToReturn.DisplayName = userFromRepo.DisplayName;
 
             return Ok(recipeToReturn);
         }
