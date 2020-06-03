@@ -41,6 +41,22 @@ namespace Reciply.API.Controllers
             throw new Exception($"Adding recipe {userId} failed on save");
         }
 
+        [HttpDelete("users/{userId}/{recipeId}")]
+        public async Task<IActionResult> DeleteRecipe(int recipeId, int userId)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var recipeFromRepo = await _repo.GetRecipe(recipeId);
+
+            _repo.Delete(recipeFromRepo);
+
+            if (await _repo.SaveAllChanges())
+                return NoContent();
+
+            throw new Exception("Error deleting the message");
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetRecipe(int id)
         {
