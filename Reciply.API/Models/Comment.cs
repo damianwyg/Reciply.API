@@ -11,7 +11,7 @@ namespace Reciply.API.Models
         public string Message { get; set; }
         public DateTime DateAdded { get; set; }
 
-        public virtual User User { get; set; }
-        public virtual Recipe Recipe { get; set; }
+        public User User { get; set; }
+        public Recipe Recipe { get; set; }
     }
 }
