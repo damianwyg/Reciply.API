@@ -10,7 +10,7 @@ using Reciply.API.Models;
 
 namespace Reciply.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users/[controller]")]
     [ApiController]
     public class RecipesController : ControllerBase
     {
@@ -23,13 +23,10 @@ namespace Reciply.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost("users/{userId}")]
-        public async Task<IActionResult> AddRecipe(int userId, RecipeForAddDto recipeForAddDto)
+        [HttpPost]
+        public async Task<IActionResult> AddRecipe(RecipeForAddDto recipeForAddDto)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
-                return Unauthorized();
-
-            var userFromRepo = await _repo.GetUser(userId);
+            var userFromRepo = await _repo.GetUser(int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value));
 
             var recipeToCreate = _mapper.Map<Recipe>(recipeForAddDto);
 
@@ -38,16 +35,18 @@ namespace Reciply.API.Controllers
             if (await _repo.SaveAllChanges())
                 return NoContent();
 
-            throw new Exception($"Adding recipe {userId} failed on save");
+            throw new Exception($"Adding recipe failed on save");
         }
 
-        [HttpDelete("users/{userId}/{recipeId}")]
-        public async Task<IActionResult> DeleteRecipe(int recipeId, int userId)
+        [HttpDelete("{recipeId}")]
+        public async Task<IActionResult> DeleteRecipe(int recipeId)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
-                return Unauthorized();
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             var recipeFromRepo = await _repo.GetRecipe(recipeId);
+
+            if (userId != recipeFromRepo.UserId)
+                return Unauthorized();
 
             _repo.Delete(recipeFromRepo);
 
@@ -61,6 +60,10 @@ namespace Reciply.API.Controllers
         public async Task<IActionResult> GetRecipe(int id)
         {
             var recipeFromRepo = await _repo.GetRecipe(id);
+
+            if (recipeFromRepo == null)
+                return NotFound();
+
             var userFromRepo = await _repo.GetUser(recipeFromRepo.UserId);
 
             var recipeToReturn = _mapper.Map<RecipeForDetailsDto>(recipeFromRepo);
@@ -76,20 +79,22 @@ namespace Reciply.API.Controllers
         {
             var recipesFromRepo = await _repo.GetRecipes();
 
-            var recipesToReturn = _mapper.Map<IEnumerable<RecipeForDetailsDto>>(recipesFromRepo);
+            var recipesToReturn = _mapper.Map<IEnumerable<RecipeForUserListingDto>>(recipesFromRepo);
 
             return Ok(recipesToReturn);
         }
 
-        [HttpPut("users/{userId}/{recipeId}")]
-        public async Task<IActionResult> UpdateRecipe(int recipeId, int userId, RecipeForUpdateDto recipeForUpdateDto)
+        [HttpPut("{recipeId}")]
+        public async Task<IActionResult> UpdateRecipe(int recipeId, RecipeForUpdateDto recipeForUpdateDto)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
-                return Unauthorized();
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             var recipeFromRepo = await _repo.GetRecipe(recipeId);
 
-            var recipe = _mapper.Map(recipeForUpdateDto, recipeFromRepo);
+            if (userId != recipeFromRepo.UserId)
+                return Unauthorized();
+
+            _mapper.Map(recipeForUpdateDto, recipeFromRepo);
 
             if (await _repo.SaveAllChanges())
                 return NoContent();
