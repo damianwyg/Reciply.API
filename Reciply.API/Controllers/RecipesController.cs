@@ -45,9 +45,6 @@ namespace Reciply.API.Controllers
 
             var recipeFromRepo = await _repo.GetRecipe(recipeId);
 
-            if (userId != recipeFromRepo.UserId)
-                return Unauthorized();
-
             _repo.Delete(recipeFromRepo);
 
             if (await _repo.SaveAllChanges())
