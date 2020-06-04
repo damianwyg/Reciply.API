@@ -22,7 +22,7 @@ namespace Reciply.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name ="GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             var userFromRepo = await _repo.GetUser(id);

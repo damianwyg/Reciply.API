@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -17,12 +18,14 @@ namespace Reciply.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _config;
+        private readonly IMapper _mapper;
         private readonly IAuthRepository _repo;
 
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        public AuthController(IAuthRepository repo, IConfiguration config, IMapper mapper)
         {
             _repo = repo;
             _config = config;
+            _mapper = mapper;
         }
 
         [HttpPost("login")]
@@ -67,18 +70,16 @@ namespace Reciply.API.Controllers
         {
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
+            var userToCreate = _mapper.Map<User>(userForRegisterDto);
+
             if (await _repo.UserExists(userForRegisterDto.Username))
                 return BadRequest("User already exists");
 
-            var userToSave = new User
-            {
-                Username = userForRegisterDto.Username,
-                Email = userForRegisterDto.Email
-            };
+            var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
 
-            var userSaved = await _repo.Register(userToSave, userForRegisterDto.Password);
+            var userToReturn = _mapper.Map<UserForDetailsDto>(userToCreate);
 
-            return StatusCode(201);
+            return CreatedAtRoute("GetUser", new { controller = "Users", id = createdUser.UserId }, userToReturn);
         }
     }
 }

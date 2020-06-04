@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Reciply.API.Dtos
 {
@@ -17,5 +14,27 @@ namespace Reciply.API.Dtos
         [Required]
         [StringLength(10, MinimumLength = 6, ErrorMessage = "Password must contain 6 - 10 characters")]
         public string Password { get; set; }
+
+        [Required]
+        public string City { get; set; }
+
+        [Required]
+        public string Country { get; set; }
+
+        [Required]
+        public string AvatarUrl { get; set; }
+
+        [Required]
+        public string DisplayName { get; set; }
+
+        public DateTime Created { get; set; }
+        public DateTime LastActive { get; set; }
+        public string AboutMe { get; set; }
+
+        public UserForRegisterDto()
+        {
+            Created = DateTime.Now;
+            LastActive = DateTime.Now;
+        }
     }
 }
