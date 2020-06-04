@@ -25,7 +25,15 @@ namespace Reciply.API.Data.Extensions
                 .ForMember(dest => dest.UserId, opt =>
                 {
                     opt.MapFrom(src => src.User.UserId);
-                }); ;
-            }
+                })
+                .ForMember(dest => dest.Username, opt =>
+                 {
+                     opt.MapFrom(src => src.User.DisplayName);
+                 })
+                .ForMember(dest => dest.AvatarUrl, opt =>
+                 {
+                     opt.MapFrom(src => src.User.AvatarUrl);
+                 });
+        }
     }
 }

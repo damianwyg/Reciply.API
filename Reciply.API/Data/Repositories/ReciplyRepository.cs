@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Reciply.API.Data.Interfaces;
@@ -23,6 +24,20 @@ namespace Reciply.API.Data.Repositories
         public void Delete<T>(T entity) where T : class
         {
             _context.Remove(entity);
+        }
+
+        public async Task<Comment> GetComment(int id)
+        {
+            var comment = await _context.Comments.FirstOrDefaultAsync(c => c.CommentId == id);
+
+            return comment;
+        }
+
+        public async Task<IEnumerable<Comment>> GetComments(int recipeId)
+        {
+            var comments = await _context.Comments.Include(u => u.User).Include(r => r.Recipe).Where(c => c.Recipe.RecipeId == recipeId).OrderByDescending(c => c.DateAdded).ToListAsync();
+
+            return comments;
         }
 
         public async Task<Recipe> GetRecipe(int id)
