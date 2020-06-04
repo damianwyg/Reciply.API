@@ -21,6 +21,11 @@ namespace Reciply.API.Data.Extensions
             CreateMap<RecipeForAddDto, Recipe>();
             CreateMap<IngredientForRecipeAddDto, Ingredient>();
             CreateMap<RecipeForUpdateDto, Recipe>();
-        }
+            CreateMap<Comment, CommentForRecipeDetailsDto>()
+                .ForMember(dest => dest.UserId, opt =>
+                {
+                    opt.MapFrom(src => src.User.UserId);
+                }); ;
+            }
     }
 }

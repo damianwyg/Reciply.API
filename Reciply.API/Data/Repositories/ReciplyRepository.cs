@@ -27,7 +27,7 @@ namespace Reciply.API.Data.Repositories
 
         public async Task<Recipe> GetRecipe(int id)
         {
-            var recipe = await _context.Recipes.Include(i => i.Ingredients).FirstOrDefaultAsync(r => r.RecipeId == id);
+            var recipe = await _context.Recipes.Include(i => i.Ingredients).Include(c => c.Comments).FirstOrDefaultAsync(r => r.RecipeId == id);
 
             return recipe;
         }

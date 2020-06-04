@@ -16,5 +16,6 @@ namespace Reciply.API.Models
         public User User { get; set; }
 
         public ICollection<Ingredient> Ingredients { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

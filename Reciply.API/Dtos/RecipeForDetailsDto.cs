@@ -21,5 +21,6 @@ namespace Reciply.API.Dtos
         public string DisplayName { get; set; }
 
         public ICollection<IngredientForRecipeDetailsDto> Ingredients { get; set; }
+        public ICollection<CommentForRecipeDetailsDto> Comments { get; set; }
     }
 }

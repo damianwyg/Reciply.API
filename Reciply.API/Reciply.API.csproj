@@ -35,6 +35,16 @@
     <Compile Remove="Migrations\20200602091422_RenameUrlInRecipe.Designer.cs" />
     <Compile Remove="Migrations\20200602091607_InitialAdd.cs" />
     <Compile Remove="Migrations\20200602091607_InitialAdd.Designer.cs" />
+    <Compile Remove="Migrations\20200604080432_AddComment.cs" />
+    <Compile Remove="Migrations\20200604080432_AddComment.Designer.cs" />
+    <Compile Remove="Migrations\20200604080923_AddComment.cs" />
+    <Compile Remove="Migrations\20200604080923_AddComment.Designer.cs" />
+    <Compile Remove="Migrations\20200604081240_AddComment.cs" />
+    <Compile Remove="Migrations\20200604081240_AddComment.Designer.cs" />
+    <Compile Remove="Migrations\20200604081552_AddComment.cs" />
+    <Compile Remove="Migrations\20200604081552_AddComment.Designer.cs" />
+    <Compile Remove="Migrations\20200604081756_AddComment.cs" />
+    <Compile Remove="Migrations\20200604081756_AddComment.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
