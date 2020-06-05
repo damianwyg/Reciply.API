@@ -4,7 +4,7 @@
     {
         private const int _maxPageSize = 50;
         private int _pageSize = 10;
-        public string Ingredient { get; set; }
+        public string SearchQuery { get; set; }
         public bool IsVegan { get; set; }
         public bool IsVegetarian { get; set; }
         public int PageNumber { get; set; } = 1;

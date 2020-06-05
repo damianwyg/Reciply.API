@@ -57,8 +57,8 @@ namespace Reciply.API.Data.Repositories
             if (recipeParams.IsVegetarian == true)
                 recipes = recipes.Where(r => r.IsVegetarian == true);
 
-            if (recipeParams.Ingredient != null) // check for ingredient
-                recipes = recipes.Where(r => r.Ingredients.Any(i => i.Name.Contains(recipeParams.Ingredient)));
+            if (recipeParams.SearchQuery != null && recipeParams.SearchQuery != "null") // check for ingredient
+                recipes = recipes.Where( r=> r.Name.Contains(recipeParams.SearchQuery) || r.Ingredients.Any(i => i.Name.Contains(recipeParams.SearchQuery)));
 
             return await PagedList<Recipe>.CreateAsync(recipes, recipeParams.PageNumber, recipeParams.PageSize);
         }
