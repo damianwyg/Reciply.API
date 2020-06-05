@@ -25,6 +25,19 @@ namespace Reciply.API.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet("myrecipes")]
+        public async Task<IActionResult> GetRecipesForCurrentUser()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            var recipesForUser = await _repo.GetRecipesForCurrentUser(userId);
+
+            var recipesToReturn = _mapper.Map<IEnumerable<RecipeForUserListingDto>>(recipesForUser);
+
+            return Ok(recipesToReturn);
+
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddRecipe(RecipeForAddDto recipeForAddDto)
         {
@@ -47,6 +60,9 @@ namespace Reciply.API.Controllers
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             var recipeFromRepo = await _repo.GetRecipe(recipeId);
+
+            if (userId != recipeFromRepo.UserId)
+                return Unauthorized();
 
             _repo.Delete(recipeFromRepo);
 

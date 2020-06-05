@@ -72,9 +72,6 @@ namespace Reciply.API.Data.Repositories
                 .OrderByDescending(r => r.DateAdded)
                 .AsQueryable();
 
-            if (recipeParams.UserId != 0)  // if id != 0 then we are getting recipes for single user
-                recipes = recipes.Where(r => r.UserId == recipeParams.UserId);
-
             if (recipeParams.IsVegan == true)
                 recipes = recipes.Where(r => r.IsVegan == true);
 
@@ -97,6 +94,13 @@ namespace Reciply.API.Data.Repositories
             }
 
             return await PagedList<Recipe>.CreateAsync(recipes, recipeParams.PageNumber, recipeParams.PageSize);
+        }
+
+        public async Task<IEnumerable<Recipe>> GetRecipesForCurrentUser(int id)
+        {
+            var recipes = await _context.Recipes.Where(r => r.UserId == id).Include(r => r.Ingredients).ToListAsync();
+
+            return recipes;
         }
 
         public async Task<User> GetUser(int id)
