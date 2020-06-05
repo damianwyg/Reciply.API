@@ -77,7 +77,9 @@ namespace Reciply.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetRecipes([FromQuery] RecipeParams recipeParams)
         {
-            var recipesFromRepo = await _repo.GetRecipes(recipeParams);
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            var recipesFromRepo = await _repo.GetRecipes(userId, recipeParams);
 
             var recipesToReturn = _mapper.Map<IEnumerable<RecipeForUserListingDto>>(recipesFromRepo);
 

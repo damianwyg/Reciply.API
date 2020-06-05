@@ -14,9 +14,11 @@ namespace Reciply.API.Data.Interfaces
 
         Task<IEnumerable<Comment>> GetComments(int recipeId);
 
+        Task<Follow> GetFollow(int userId, int recipientId);
+
         Task<Recipe> GetRecipe(int id);
 
-        Task<PagedList<Recipe>> GetRecipes(RecipeParams recipeParams);
+        Task<PagedList<Recipe>> GetRecipes(int loggedUserId, RecipeParams recipeParams);
 
         Task<User> GetUser(int id);
 

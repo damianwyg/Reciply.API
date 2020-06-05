@@ -9,6 +9,8 @@
         public int PageNumber { get; set; } = 1;
         public string SearchQuery { get; set; }
         public int UserId { get; set; }
+        public bool Followees { get; set; } = false;
+        public bool Followers { get; set; } = false;
 
         public int PageSize
         {

@@ -6,6 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Reciply.API.Data.Interfaces;
 using Reciply.API.Dtos;
+using Reciply.API.Models;
 
 namespace Reciply.API.Controllers
 {
@@ -56,6 +57,33 @@ namespace Reciply.API.Controllers
                 return NoContent();
 
             throw new Exception($"Updating user {id} failed on save");
+        }
+
+        [HttpPost("follow/{recipientId}")]
+        public async Task<IActionResult> FollowUser(int recipientId)
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            var follow = await _repo.GetFollow(userId, recipientId);
+
+            if (follow != null)
+                return BadRequest("You already followed this user");
+
+            if (await _repo.GetUser(recipientId) == null)
+                return NotFound();
+
+            follow = new Follow
+            {
+                FollowerId = userId,
+                FolloweeId = recipientId
+            };
+
+            _repo.Add<Follow>(follow);
+
+            if (await _repo.SaveAllChanges())
+                return Ok();
+
+            return BadRequest("Failed to follow user");
         }
     }
 }
