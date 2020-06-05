@@ -31,6 +31,7 @@ namespace Reciply.API.Controllers
             var userFromRepo = await _repo.GetUser(int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value));
 
             var recipeToCreate = _mapper.Map<Recipe>(recipeForAddDto);
+            recipeToCreate.DateAdded = DateTime.Now;
 
             userFromRepo.Recipes.Add(recipeToCreate);
 
@@ -99,6 +100,8 @@ namespace Reciply.API.Controllers
                 return Unauthorized();
 
             _mapper.Map(recipeForUpdateDto, recipeFromRepo);
+
+            recipeForUpdateDto.DateAdded = DateTime.Now;
 
             if (await _repo.SaveAllChanges())
                 return NoContent();

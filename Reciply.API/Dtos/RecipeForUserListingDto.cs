@@ -1,4 +1,6 @@
-﻿namespace Reciply.API.Dtos
+﻿using System;
+
+namespace Reciply.API.Dtos
 {
     public class RecipeForUserListingDto
     {
@@ -9,5 +11,6 @@
         public string Preparation { get; set; }
         public bool IsVegetarian { get; set; }
         public bool IsVegan { get; set; }
+        public DateTime DateAdded { get; set; }
     }
 }

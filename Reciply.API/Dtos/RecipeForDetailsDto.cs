@@ -15,6 +15,7 @@ namespace Reciply.API.Dtos
         public string Preparation { get; set; }
         public bool IsVegetarian { get; set; }
         public bool IsVegan { get; set; }
+        public DateTime DateAdded { get; set; }
 
         public int UserId { get; set; }
         public string AvatarUrl { get; set; }

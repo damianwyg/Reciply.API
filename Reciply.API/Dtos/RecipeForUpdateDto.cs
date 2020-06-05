@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Reciply.API.Dtos
 {
@@ -9,6 +10,7 @@ namespace Reciply.API.Dtos
         public string Preparation { get; set; }
         public bool IsVegetarian { get; set; }
         public bool IsVegan { get; set; }
+        public DateTime DateAdded { get; set; }
 
         public ICollection<IngredientForRecipeAddDto> Ingredients { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Reciply.API.Models
 {
@@ -11,6 +12,7 @@ namespace Reciply.API.Models
         public string Preparation { get; set; }
         public bool IsVegetarian { get; set; }
         public bool IsVegan { get; set; }
+        public DateTime DateAdded { get; set; }
 
         public int UserId { get; set; }
         public User User { get; set; }
