@@ -16,17 +16,17 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Water",
+            "Name": "water",
             "Quantity": 14,
             "Unit": "ml"
           },
           {
-            "Name": "Orange",
+            "Name": "orange",
             "Quantity": 50,
             "Unit": "g"
           }
@@ -38,17 +38,17 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Apple",
+            "Name": "apple",
             "Quantity": 100,
             "Unit": "g"
           },
           {
-            "Name": "Cream",
+            "Name": "cream",
             "Quantity": 50,
             "Unit": "ml"
           },
           {
-            "Name": "Plum",
+            "Name": "plum",
             "Quantity": 50,
             "Unit": "g"
           }
@@ -74,12 +74,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -105,12 +105,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -136,12 +136,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -167,12 +167,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -198,12 +198,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -229,12 +229,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -260,12 +260,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -291,12 +291,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }
@@ -322,12 +322,12 @@
         "PhotoUrl": "https://source.unsplash.com/collection/190727/800x600",
         "Ingredients": [
           {
-            "Name": "Chilli",
+            "Name": "chilli",
             "Quantity": 21,
             "Unit": "g"
           },
           {
-            "Name": "Wine",
+            "Name": "wine",
             "Quantity": 14,
             "Unit": "ml"
           }

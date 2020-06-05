@@ -49,7 +49,16 @@ namespace Reciply.API.Data.Repositories
 
         public async Task<PagedList<Recipe>> GetRecipes(RecipeParams recipeParams)
         {
-            var recipes = _context.Recipes.Include(i => i.Ingredients);
+            var recipes = _context.Recipes.Include(i => i.Ingredients).OrderByDescending(r => r.DateAdded).AsQueryable();
+
+            if (recipeParams.IsVegan == true)
+                recipes = recipes.Where(r => r.IsVegan == true);
+
+            if (recipeParams.IsVegetarian == true)
+                recipes = recipes.Where(r => r.IsVegetarian == true);
+
+            if (recipeParams.Ingredient != null) // check for ingredient
+                recipes = recipes.Where(r => r.Ingredients.Any(i => i.Name.Contains(recipeParams.Ingredient)));
 
             return await PagedList<Recipe>.CreateAsync(recipes, recipeParams.PageNumber, recipeParams.PageSize);
         }

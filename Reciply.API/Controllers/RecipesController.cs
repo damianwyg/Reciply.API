@@ -32,6 +32,7 @@ namespace Reciply.API.Controllers
 
             var recipeToCreate = _mapper.Map<Recipe>(recipeForAddDto);
             recipeToCreate.DateAdded = DateTime.Now;
+            recipeToCreate.Name = recipeToCreate.Name.ToLower();
 
             userFromRepo.Recipes.Add(recipeToCreate);
 
