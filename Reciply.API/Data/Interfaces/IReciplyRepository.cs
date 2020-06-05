@@ -16,7 +16,7 @@ namespace Reciply.API.Data.Interfaces
 
         Task<Recipe> GetRecipe(int id);
 
-        Task<IEnumerable<Recipe>> GetRecipes();
+        Task<PagedList<Recipe>> GetRecipes(RecipeParams recipeParams);
 
         Task<User> GetUser(int id);
 

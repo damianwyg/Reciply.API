@@ -4,6 +4,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Reciply.API.Data;
+using Reciply.API.Data.Extensions;
 using Reciply.API.Data.Interfaces;
 using Reciply.API.Dtos;
 using Reciply.API.Models;
@@ -72,11 +74,16 @@ namespace Reciply.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetRecipes()
+        public async Task<IActionResult> GetRecipes([FromQuery]RecipeParams recipeParams)
         {
-            var recipesFromRepo = await _repo.GetRecipes();
+            var recipesFromRepo = await _repo.GetRecipes(recipeParams);
 
             var recipesToReturn = _mapper.Map<IEnumerable<RecipeForUserListingDto>>(recipesFromRepo);
+
+            Response.AddPagination(recipesFromRepo.CurrentPage, // add pagination headers
+                recipesFromRepo.PageSize,
+                recipesFromRepo.ItemsCount,
+                recipesFromRepo.TotalPages);
 
             return Ok(recipesToReturn);
         }

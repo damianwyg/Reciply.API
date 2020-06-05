@@ -47,11 +47,11 @@ namespace Reciply.API.Data.Repositories
             return recipe;
         }
 
-        public async Task<IEnumerable<Recipe>> GetRecipes()
+        public async Task<PagedList<Recipe>> GetRecipes(RecipeParams recipeParams)
         {
-            var recipes = await _context.Recipes.Include(i => i.Ingredients).ToListAsync();
+            var recipes = _context.Recipes.Include(i => i.Ingredients);
 
-            return recipes;
+            return await PagedList<Recipe>.CreateAsync(recipes, recipeParams.PageNumber, recipeParams.PageSize);
         }
 
         public async Task<User> GetUser(int id)
