@@ -13,7 +13,11 @@ namespace Reciply.API.Data.Extensions
                 {
                     opt.MapFrom(src => src.Recipes.Count);
                 });
-            CreateMap<User, UserForDetailsDto>();
+            CreateMap<User, UserForDetailsDto>()
+                .ForMember(dest => dest.RecipesCount, opt =>
+                {
+                    opt.MapFrom(src => src.Recipes.Count);
+                });
             CreateMap<UserForRegisterDto, User>();
             CreateMap<Recipe, RecipeForUserListingDto>();
             CreateMap<Recipe, RecipeForDetailsDto>();

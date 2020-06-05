@@ -51,6 +51,9 @@ namespace Reciply.API.Data.Repositories
         {
             var recipes = _context.Recipes.Include(i => i.Ingredients).OrderByDescending(r => r.DateAdded).AsQueryable();
 
+            if (recipeParams.UserId != 0)
+                recipes = recipes.Where(r => r.UserId == recipeParams.UserId);
+
             if (recipeParams.IsVegan == true)
                 recipes = recipes.Where(r => r.IsVegan == true);
 

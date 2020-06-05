@@ -75,7 +75,7 @@ namespace Reciply.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetRecipes([FromQuery]RecipeParams recipeParams)
+        public async Task<IActionResult> GetRecipes([FromQuery] RecipeParams recipeParams)
         {
             var recipesFromRepo = await _repo.GetRecipes(recipeParams);
 
