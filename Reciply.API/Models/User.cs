@@ -21,6 +21,7 @@ namespace Reciply.API.Models
         public string AvatarUrl { get; set; }
 
         public ICollection<Recipe> Recipes { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         public ICollection<Follow> Followers { get; set; }
         public ICollection<Follow> Followees { get; set; }
     }
